@@ -1,0 +1,49 @@
+'''
+Satria sedang mengikuti program magang ceria yang waktu berlangsungnya adalah selama 10 minggu. 
+Gaji yang diberikan adalah gaji per hari. Total pajak yang harus Satria bayarkan dari pendapatannya selama bekerja adalah 20%. 
+Setelah membayar pajak, Satria menghabiskan 15% dari pendapatan bersihnya untuk membeli action figure favoritnya.
+Dan 10% nya untuk ditabung sendiri.
+Lalu, Satria menggunakan 23% dari sisa uangnya untuk disumbangkan ke para korban bencana.
+Sementara itu 27% nya akan diberikan kepada orang tuanya, 
+dan sisanya akan diserahkan ke panti asuhan.
+Dari uraian soal cerita di atas, silakan buat program yang memiliki inputan sebagai berikut:
+1. Gaji per hari yang diinginkan
+2. Total hari kerja yang ingin dilakukan dalam 10 minggu
+Output dari program adalah sebagai berikut :
+1. Pendapatan Satria sebelum membayar pajak.
+2. Pendapatan Satria setelah membayar pajak.
+3. Jumlah uang yang akan Satria gunakan untuk membeli action figure kesayangan.
+4. Jumlah uang yang akan Satria tabung
+5. Jumlah uang yang akan Satria gunakan untuk disumbangkan ke para korban bencana.
+6. Jumlah uang yang akan Satria berikan pada orangtuanya.
+7. Jumlah uang yang akan diterima panti asuhan.
+'''
+#Source Code
+
+gaji_per_hari = int(input("Gaji per hari yang Satria inginkan: "))
+jumlah_jam_kerja = int(input("Jumlah jam kerja yang akan dilakukan selama 10 minggu: "))
+
+lama_kerja = 10
+persen_pajak = 0.2 #20%
+persen_beli_action_figure = 0.15  #15%
+persen_ditabung = 0.1 #10%
+persen_sumbang_korban_bencana = 0.23  #23%
+persen_beri_orang_tua = 0.27  #27%
+
+sebelum_bayar_pajak = gaji_per_hari * jumlah_jam_kerja * lama_kerja
+pajak = sebelum_bayar_pajak * persen_pajak
+setelah_bayar_pajak = sebelum_bayar_pajak - pajak
+beli_action_figure = setelah_bayar_pajak * persen_beli_action_figure
+ditabung = setelah_bayar_pajak * persen_ditabung
+sisa_uang = setelah_bayar_pajak - beli_action_figure - ditabung
+uang_sumbang_korban_bencana = sisa_uang - persen_sumbang_korban_bencana
+uang_beri_orang_tua = uang_sumbang_korban_bencana * persen_beri_orang_tua
+uang_panti_asuhan = uang_sumbang_korban_bencana - uang_beri_orang_tua
+
+print("Pendapatan Satria sebelum membayar pajak: Rp {:.2f}".format(sebelum_bayar_pajak))
+print("Pendapatan Satria setelah membayar pajak: Rp {:.2f}".format(setelah_bayar_pajak))
+print("Jumlah uang yang akan Satria gunakan untuk membeli action figure kesayangan: Rp {:.2f}".format(beli_action_figure))
+print("Jumlah uang yang akan Satria tabung: Rp {:.2f}".format(ditabung))
+print("Jumlah uang yang akan Satria gunakan untuk disumbangkan ke para korban bencana: Rp {:.2f}".format(uang_sumbang_korban_bencana))
+print("Jumlah uang yang akan Satria berikan pada orangtuanya: Rp {:.2f}".format(uang_beri_orang_tua))
+print("Jumlah uang yang akan diterima panti asuhan: Rp {:.2f}".format(uang_panti_asuhan))
