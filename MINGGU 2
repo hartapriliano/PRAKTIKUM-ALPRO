@@ -1,0 +1,12 @@
+#LATIHAN 2.1
+
+print ("PROGRAM MENGHITUNG RATA-RATA DARI 3 BILANGAN BULAT SEMBARANG")
+print('=============================================================')
+
+bil1 = int (input("Masukkan bilangan pertama: "))
+bil2 = int (input("Masukkan bilangan kedua: "))
+bil3 = int (input("Masukkan bilangan ketiga: "))
+
+hitung = (bil1+bil2+bil3)/3
+
+print("Jadi rata-ratanya adalah: {:.2f}".format(hitung))
