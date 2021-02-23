@@ -1,0 +1,47 @@
+'''
+REFRENSI SOAL CERITA: https://iesguhanief.wordpress.com/python/menentukan-nilaigrade-dengan-python/
+
+Harry adalah salah satu mahasiswa yang berprestasi di kampusnya. Ia juga dikenal sangat dekat dengan dosen-dosen pengampunya.
+Sampai suatu ketika, agenda untuk melakukan penginputan nilai bagi mahasiswa-mahasiswa pun telah tiba.
+Namun dosennya kesulitan dalam membagi waktu karena ia harus tetap menyelesaikan project eksternalnya yang kebetulan deadlinenya berdekatan.
+Sehingga dosennya meminta tolong kepada Harry untuk membantu membuatkan program yang dapat mengklasifikasikan terhadap nilai 
+yang akan diinputkan. Program tersebut diharapkan nantinya akan memiliki inputan seperti:
+1. Nama Mahasiswa;
+2. Nomor Induk Kemahasiswaannya;
+3. Nilai Akhir yang telah dihitung sebelumnya.
+Adapun output yang diharapkan adalah kategori dari nilai itu sendiri beserta pesan otomatis yang akan ditampilkan.
+1. Salinan dari Nama Mahasiswa;
+2. Salinan dari Nomor Induk Kemahasiswaan;
+3. Kategori Nilai yang didapat mahasiswa beserta pesan otomatisnya.
+Tiap-tiap kategori nilai akan memunculkan pesan otomatis yang berbeda-beda, kriteria isi pesan telah diatur sebagai berikut:
+A(79.1 - 100): Selamat! Kamu telah lolos mata kuliah ini, dan telah menempuhnya dengan sangat baik!
+B(69.1 - 79): Selamat! Kamu telah lolos mata kuliah ini, dan telah menempuhnya dengan baik!
+C(59.1 - 69): Selamat! Kamu telah lolos mata kuliah ini, dan telah menempuhnya dengan cukup baik!
+D(50 - 59): Ayo, Semangat tingkatkan lagi! Kamu pasti bisa lebih dari ini, percayalah pada kemampuanmu!
+E(<50): Sepertinya kamu belum beruntung untuk lolos mata kuliah ini. Sukses mencoba lagi di semester depan. Tetap semangat dan learn more!
+Dan juga dosen meminta tolong kepada Harry untuk membuatkan sebuah error handling yang nantinya dapat menangani andai kata dosennya salah
+menginputkan yang mungkin saja dikarenakan oleh faktor kelelahan.
+'''
+
+print("PROGRAM PENGHITUNGAN NILAI AKHIR MAHASISWA")
+nama = input("Masukkan Nama Mahasiswa: ")
+nik = input("Masukkan Nomor Induk Kemahasiswaan: ")
+nilai = float(input("Masukkan Nilai Akhir: "))
+
+if(nilai >= 79.1 and nilai <= 100):
+    kategori =  "A\nSelamat! Kamu telah lolos mata kuliah ini, dan telah menempuhnya dengan sangat baik!"
+elif(nilai >= 69.1 and nilai <= 79):
+    kategori = "B\nSelamat! Kamu telah lolos mata kuliah ini, dan telah menempuhnya dengan baik!"
+elif(nilai >= 59.1 and nilai<= 69):
+    kategori = "C\nSelamat! Kamu telah lolos mata kuliah ini, dan telah menempuhnya dengan cukup baik!"
+elif(nilai >= 50 and nilai <= 59):
+    kategori = "D\nAyo, Semangat tingkatkan lagi! Kamu pasti bisa lebih dari ini, percayalah pada kemampuanmu!"
+elif(nilai >= 0 and nilai < 50):
+    kategori = "E\nSepertinya kamu belum beruntung untuk lolos mata kuliah ini. Sukses mencoba lagi di semester depan. Tetap semangat dan learn more!"
+else:
+    kategori = ("###########################\nAnda Salah Menginputkan Nilai. Data Tidak Akan Disimpan!")
+
+print("==============================")
+print("Nama Mahasiswa = ", nama)
+print("Nomor Induk Kemahasiswaan = ", nik)
+print("Kategori dari Nilai Akhir yang Didapat",nama,"adalah = ",kategori)
