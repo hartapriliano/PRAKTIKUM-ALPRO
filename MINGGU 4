@@ -1,0 +1,79 @@
+#REFERENSI: https://pesonainformatika.com/python/cara-membuat-kalkulator-sederhana-python/
+'''
+Pada suatu hari, Tono sedang berjalan-jalan di sebuah Mall terkenal di kotanya. Namun tanpa disengaja, Tono bertemu dengan seorang
+teman sefakultasnya namun berbeda kampus. Mereka bisa kenal karena dia merupakan teman semasa SMA nya. Bercakap-cakaplah mereka sampai kepada
+satu topik permasalahan. Permasalahannya adalah, teman Tono diberikan tugas oleh dosen kuliahnya untuk membuatkan sebuah program kalkulator
+sederhana yang mampu memberikan penghitungan terhadap beberapa operasi penghitungan. Dikarenakan si teman Tono ini sering membolos dan tidak
+pernah berkuliah dengan sungguh-sungguh, dia pun merasa kebingungan mendapat tugas demikian. Sebagai teman yang baik, Tono pun 
+menawarkan dirinya untuk membantu membuatkan sebuah program kalkulator sederhana tersebut. Tanpa berlama lagi, teman Tono pun merasa
+kegirangan dan sebagai ungkapan rasa terima kasihnya ia rela untuk mentraktirnya makan di mana pun Tono mau. Singkat cerita, ada beberapa
+spesifikasi yang perlu dipenuhi agar bisa mendapat poin maksimal dalam penilaian tugasnya. Antara lain:
+1. Menggunakan bentuk Modular Programming(Menggunakan Fungsi)
+2. Dibuatkan dalam bentuk menu sederhana untuk memilih operasi penghitungan yang diinginkan
+3. Ada input, proses, output yang jelas
+Adapun penjelasan input, proses, output yang diinginkan:
+Input:
+- User memberikan inputan terkait pilihan menu operasi hitung yang diinginkan
+- User memasukkan bilangan yang hendak dihitung
+Proses:
+- Tiap proses penghitungannya wajib dibuat dalam bentuk modular(fungsi)
+Output:
+- Hasil penghitungan ditampilkan dalam bentuk format ... ophit ... = ... (Jika diperlukan 2 bilangan inputan)
+
+Catatan tambahan:
+Error handling merupakan pilihan optional (boleh ada dan boleh tidak)
+Asumsikan bilangan yang diinputkan user adalah bilangan bulat
+Tanda bagi dalam output gunakan '÷'
+'''
+
+import math
+
+def jumlah(a, b):
+    return a + b
+
+def kurang(a, b):
+    return a - b
+
+def kali(a, b):
+    return a * b
+
+def bagi(a, b):
+    return a / b
+
+def pangkat(a):
+    return a**2
+
+def akar(a):
+    return math.sqrt(a)
+
+
+print("======PROGRAM KALKULATOR SEDERHANA=======")
+print("Pilih Fitur yang Diinginkan")
+print("1. Operasi Penjumlahan")
+print("2. Operasi Pengurangan")
+print("3. Operasi Perkalian")
+print("4. Operasi Pembagian")
+print("5. Operasi Pangkat(2)")
+print("6. Operasi Akar(2)")
+
+pilihan = input("Masukkan Pilihan Anda: ")
+bil1 = int(input("Masukkan Bilangan Pertama: "))
+
+if pilihan != "5" and pilihan != "6":
+    bil2 = int(input("Masukkan Bilangan Kedua: "))
+
+
+if pilihan == "1":
+    print(bil1,"+",bil2,"= ", jumlah(bil1, bil2))
+elif pilihan == "2":
+    print(bil1,"-",bil2,"= ", kurang(bil1, bil2))
+elif pilihan == "3":
+    print(bil1,"x",bil2,"= ",kali(bil1, bil2))
+elif pilihan == "4":
+    print(bil1,"÷",bil2,"= {:.2f}".format(bagi(bil1, bil2)))
+elif pilihan == "5":
+    print(bil1,"x",bil1,"= ", pangkat(bil1))
+elif pilihan == "6":
+    print("Hasilnya adalah = {:.2f}".format(akar(bil1)))
+else:
+    print("####Pilihan Fitur Tidak Tersedia#####")
