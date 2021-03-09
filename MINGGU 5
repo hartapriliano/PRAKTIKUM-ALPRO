@@ -1,0 +1,41 @@
+#REFERENSI: http://student.blog.dinus.ac.id/fanuelphalosa/2019/12/21/contoh-soal-perulangan-pada-python/
+
+'''
+Pada suatu hari, Ani sedang berjalan-jalan di taman bunga. Ia sedang asyik berfoto dengan kawanan bunga cantik nan indah yang ada di sana.
+Namun secara tidak sengaja, dia bertemu dengan teman sekaligus sahabat dekat semasa SMA-nya dulu. Berbincang-bincanglah mereka tentang
+banyak hal, sampai suatu ketika temannya curhat tentang tugas perkuliahan yang didapatkan dari dosen pengampunya. Pada tugas itu, teman Ani
+diminta oleh dosennya untuk membuat sebuah program sederhana yang difungsikan untuk penghitungan terhadap rata-rata dari data yang diinputkan.
+Tugas ini sekaligus sebagai pemenuhan tugas test tengah semesternya. Tentu donk, Ani sebagai sahabat dekatnya dulu ingin membantu temannya
+untuk menyelesaikan tugas tengah semesternya itu. Karena ia juga tidak tega melihat sahabatnya sedang mengalami kesusahan. Pun sebaliknya,
+ketika Ani kesusahan pun sahabatnya itu akan menolong semampunya. Setelah bercakap panjang lebar, temannya pun mendeskripsikan tentang kerangka
+dari program yang nantinya akan dibangun. Adapun Input, Proses, Outputnya adalah sbb:
+Input:
+- User diminta untuk menginputkan banyaknya data yang nantinya hendak dihitung
+- User diminta untuk menginputkan bilangan-bilangan berapa saja yang hendak dihitung untuk nantinya dihitung rata-ratanya
+Proses:
+- Program dapat melakukan looping sebanyak data yang dimasukkan oleh user
+- Program dapat melakukan penghitungan terhadap rata-rata dari data yang telah diinputkan oleh user sebelumnya
+Output:
+- Program dapat menampilkan hasil penghitungan rata-rata dari data yang telah diinput oleh user sebelumnya
+- Pada akhir waktu, program dapat menampilkan output-an terima kasih karena telah menggunakan program tsb.
+Selain itu, Anda dibebaskan untuk membuat Error Handling(Sifatnya tidak wajib) ketika data yang dimasukkan adalah tidak valid
+Selamat bekerja.
+'''
+
+print("\nPROGRAM PENGHITUNGAN RATA-RATA DARI DATA YANG DIINPUTKAN")
+
+data = int(input("\nAnda ingin menginputkan berapa banyak data? "))
+
+i = 0
+rata_rata = 0
+
+try:
+      while i < data:
+            bilangan = int(input("Masukkan data: "))
+            rata_rata = rata_rata + bilangan
+            i = i + 1
+            print(rata_rata/data)
+      else:
+            print("Terima kasih telah menggunakan program ini. Hasta la vista!")
+except:
+      print("Angka yang Anda masukkan tidak valid! Atau itu bukanlah sebuah angka.")
