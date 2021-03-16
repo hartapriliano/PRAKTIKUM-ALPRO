@@ -1,0 +1,41 @@
+#REFERENSI: https://www.pythonindo.com/mengecek-bilangan-prima-atau-tidak/
+
+'''
+Barny adalah seorang pelajar tingkat mahasiswa yang dikenal di kampusnya. Ia sudah seringkali memenangkan berbagai lomba yang selalu
+berkecimpung di dunia programming. Selain dikenal oleh kalangan teman-teman sekampusnya sebagai pribadi yang cerdas, ia juga dikenal
+sebagai orang yang rendah hati dan suka menolong. Hingga sampai suatu ketika, Barny sedang makan di sebuah warteg yang ada dekat kostnya.
+Di sana ia bertemu dengan teman semasa SMA nya. Bercakap-cakaplah mereka sampai suatu ketika teman Barny curhat tentang suatu masalah.
+Rupanya teman si Barny ini merasa kesusahan karena ia baru saja mendapat tugas dari dosennya untuk membuatkan sebuah program 
+yang berjalan di Bahasa Pemrograman Python. Teman Barny ini diminta untuk membuatkan sebuah program yang dapat mendefinisikan 
+apakah sebuah angka itu termasuk ke dalam kategori bilangan prima atau bukan. Karena Barny kebetulan
+juga sedang dalam waktu senggang, maka ia pun menawarkan bantuan kepada temannya. Setelah itu, disampaikannyalah spesifikasi-spesifikasi
+yang harus ada dalam program tersebut. Antara lain:
+Input:
+- User memasukkan angka yang ingin dicek, prima atau bukannya
+Proses:
+- Program akan mengecek terlebih dahulu, inputan yang diberikan apakah benar dalam bentuk angka atau karakter yang lainnya
+- Program akan melakukan operasi pengecekan terhadap angka yang diinputkan untuk diputuskan, apakah benar prima atau bukan
+Output:
+- Program mengeluarkan outputan ... adalah bilangan prima(Jika bilangan itu benar prima)
+- Program mengeluarkan outputan ... bukan bilangan prima(Jika bilangan itu bukanlah prima)
+- Program mengeluarkan outputan Angka yang dimasukkan user adalah salah(Modifikasi sendiri kalimatnya)
+p.s: bilangan prima adalah bilangan yang habis dibagi dengan angka 1 dan dirinya sendiri
+Error Handling bersifat opsional.
+'''
+
+try:
+    print("\n PROGRAM PENGECEKAN BILANGAN PRIMA")
+    print("====================================")
+    angka = int(input("Masukkan bilangan: "))
+    if angka > 1:
+        for i in range(2, angka):
+            if(angka % i) == 0:
+                print(angka, "bukanlah bilangan prima")
+                print("Karena",i, "x" ,angka//i, "=", angka)
+                break
+        else:
+            print(angka,"adalah bilangan prima")
+    else:
+        print(angka,"bukanlah bilangan prima. Karena bilangan prima harus > 1")
+except:
+    print("Angka yang Anda masukkan salah. Atau itu bukanlah sebuah angka!")
