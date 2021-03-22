@@ -1,0 +1,59 @@
+#REFERENSI: https://medium.com/@masbe/belajar-manipulasi-string-pada-python-9539a70ad62e
+'''
+Pada suatu hari, Liony mendapat tugas dari dosennya untuk membuatkan sebuah program yang dapat melakukan beberapa pekerjaan berkaitan dengan
+olahan string. Namun dia merasa kesusahan karena program diharuskan berjalan di bahasa pemrograman Python. Doni sebagai gebetannya Liony pun
+dimintai bantuan untuk membuatkan programnya. Agar supaya cintanya diterima, maka Doni pun mau untuk membantu membuatkan programnya. 
+Adapun input, proses, dan output yang diharapkan dari program tersebut. (Untuk pengolahan string diberi batas minimal 3 pengolahan)
+Input:
+- Program meminta inputan untuk memasukkan kalimat dan kata yang ingin dicari dari kalimat itu 
+Proses:
+- Tiap-tiap operasi pengolahan string dimasukkan sesuai kebutuhan tujuan programnya
+Output:
+- Program mampu menampilkan  hitungan terhadap jumlah huruf vokal dan konsonan
+- Program mampu menampilkan panjang kalimat
+- Program mampu mencarikan kata pada kalimat berdasarkan indeksnya
+- Program mampu membalikkan kalimat
+'''
+
+print("===============PROGRAM PENGOLAHAN KALIMAT====================")
+kalimat = input("Masukkan sebuah kalimat: ")
+vokal = "aiueoAIUEO"
+konsonan = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+
+jumlah_vokal = 0
+jumlah_konsonan = 0
+
+for karakter in kalimat:
+    if karakter in vokal:
+        jumlah_vokal += 1
+    if karakter in konsonan:
+        jumlah_konsonan +=1
+print("=============================================")
+print("MENGHITUNG JUMLAH HURUF VOKAL DAN KONSONAN")
+print("=============================================")
+print("Jumlah vokal: ",jumlah_vokal)
+print("Jumlah konsonan: ",jumlah_konsonan)
+print("=============================================")
+print("MENGHITUNG PANJANG KALIMAT")
+("=============================================")
+print("Panjang kalimat: ",len(kalimat))
+("=============================================")
+print("MENCARI INDEKS PADA KALIMAT")
+("=============================================")
+kata = input("Indeks kata yang ingin Anda cari: ")
+print("Berada pada indeks ke-", kalimat.index(kata))
+print("=============================================")
+print("PROGRAM MEMBALIK KALIMAT")
+print("=============================================")
+def balik_kalimat(string):
+    string = "".join(reversed(string))
+    return string
+
+s = kalimat
+print("Kalimat sebelum dibalik: ", end="")
+print(s)
+
+print("Kalimat setelah dibalik: ", end="")
+print(balik_kalimat(s))
+print("=============================================")
+print("Terima kasih telah menggunakan program ini.")
