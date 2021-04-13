@@ -1,0 +1,14 @@
+#REFERENSI: https://devtrik.com/python/manipulasi-file-csv-dengan-python/
+'''
+Pada suatu ketika, Bobby diminta oleh dosennya untuk membuatkan sebuah program python yang dapat melakukan manipulasi terhadap file.
+Manipulasi dapat meliputi membaca, menambah, atau menulis file. Sebagai programmer yang handal, Bobby meminta tolong pada Anda
+untuk dapat membuatkan sebuah program yang dimintakan di atas.
+P.S.: untuk file ekstensinya bebas tidak harus selalu .txt '''
+
+import csv
+
+file = open('file_excel.csv','w',newline='\n')
+barisbaru = [['Silvia', 'Bioteknologi', '2019'],['Joko','Kedokteran','2020']]
+filecsv = csv.writer(file)
+filecsv.writerows(barisbaru)
+file.close()
