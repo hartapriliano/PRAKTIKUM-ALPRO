@@ -1,0 +1,36 @@
+#REFERENSI: https://www.duniailkom.com/tutorial-belajar-python-tipe-data-list-dalam-bahasa-python/
+
+'''
+Pada suatu hari, Dito sedang menghadapi Ujian Tengah Semesternya. Pada mata kuliah Algoritma dan Pemrograman, Dito mendapat tugas dari dosennya
+untuk membuat sebuah program menggunakan bahasa pemrograman Python untuk menyelesaikan sebuah studi kasus. Studi kasusnya bertema "List".
+Kamu sebagai teman terbaik Dito, hendak menolong pekerjannya karena kebetulan kamu juga sedang gabut.
+Maka adapun spesifikasi yang diinginkan dari program, antara lain:
+Input:
+Diinputkan langsung ke dalam program(Tidak ada inputan dari user)
+
+Proses:
+1. Program dapat menampilkan isi dari list yang diinputkan.
+2. Program dapat menghitung panjang dari isi list yang ada.
+3. Program dapat menambah data ke dalam list yang ada.
+4. Program dapat membalikkan isi dari list yang ada.
+5. Program dapat mengurutkan isi dari list yang ada.
+6. Program dapat mencari nilai terbesar dari list yang ada.
+7. Program dapat mencari nilai terkecil dari list yang ada.
+
+Output:
+Program menampilkan hasil keluaran dari tiap-tiap proses yang ada.
+'''
+
+daftar_nilai = [997,994,901,675,555,465,1000]
+print("1. Isi dari list adalah: ",daftar_nilai)
+print("2. Panjang dari list adalah: ",len(daftar_nilai))
+print("3. Penambahan data ke dalam list: ")
+daftar_nilai.append(886)
+daftar_nilai.append(100)
+print("Isi dari list yang telah ditambahkan: ",daftar_nilai)
+daftar_nilai.reverse()
+print("4. Isi dari list setelah dibalik: ",daftar_nilai)
+daftar_nilai.sort()
+print("5. Isi dari list setelah diurutkan: ",daftar_nilai)
+print("6. Nilai terbesar dari list: ",max(daftar_nilai))
+print("7. Nilai terkecil dari list: ",min(daftar_nilai))
