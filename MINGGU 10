@@ -1,0 +1,52 @@
+#REFERENSI: https://www.duniailkom.com/tutorial-belajar-python-tipe-data-dictionary-dalam-bahasa-python/
+
+'''
+Ari adalah mahasiswa yang terkenal cerdas di kampusnya. Ia selalu memenangkan berbagai perlombaan yang berkecimpung di dunia programming.
+Selain cerdas, ia juga dikenal sebagai seorang pribadi yang baik hati dan suka menolong. Sampai suatu ketika, Ari dimintakan tolong oleh teman
+kuliahnya untuk membantunya membuatkan sebuah program yang berjalan di bahasa Python. Karena kebetulan Ari ini juga sedang dalam waktu luang,
+akhirnya ia pun mau untuk dimintakan tolong membuatkan programnya.
+Program yang diminta adalah program Python yang mampu menampung beberapa isi data dalam dictionary. Isi dictionary bebas yang penting mampu
+menunjukkan operasi-operasi dasar apa saja yang bisa dilakukan bersamaan dengan dictionary ini. Adapun input, proses, output yang diinginkan:
+Input:
+- Langsung dari programnya(Tidak ada inputan dari user)
+Proses:
+- Mampu mengakses seluruh atau isi data dictionary tertentu
+- Mampu menghapus data yang ada dalam dictionary
+- Mampu mengubah isi data yang ada dalam dictionary
+- Mampu menambahkan data ke dalam dictionary
+- Mampu menghitung panjang dictionary
+- Operasi bebas
+
+Output:
+- Menampilkan hasil dari tiap-tiap proses yang dilakukan
+'''
+
+daftar_dict ={"nama_depan":"harta", "nama_belakang" : "priliano", "hobi" : "ngoding", "usia" : "21", "jurusan" : "informatika", "kuliah" : "Duta Wacana"}
+
+print("1. ", daftar_dict["nama_belakang"])
+
+for dictio in daftar_dict:
+    print("2. ", daftar_dict[dictio])
+
+del(daftar_dict["nama_depan"])
+print("3. ",daftar_dict)
+
+daftar_dict["hobi"] = "traveling"
+print("4. ",daftar_dict)
+
+daftar_dict.update({"status" : "single"})
+print("5. ",daftar_dict)
+
+daftar_dict.update({"nama_depan" : "harta"})
+
+print("6. Panjang dictionary: ",len(daftar_dict))
+
+print("=================================================")
+print("Buat biodata:")
+print("Nama depan: ",daftar_dict["nama_depan"])
+print("Nama belakang:",daftar_dict["nama_belakang"])
+print("Hobi: ",daftar_dict["hobi"])
+print("Umur: ",daftar_dict["usia"])
+print("Jurusan: ",daftar_dict["jurusan"])
+print("Status:",daftar_dict["status"])
+print("Universitas:",daftar_dict["kuliah"])
