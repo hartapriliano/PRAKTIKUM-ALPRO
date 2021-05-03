@@ -1,0 +1,41 @@
+#REFERENSI: https://www.duniailkom.com/tutorial-belajar-python-tipe-data-tuple-dalam-bahasa-python/
+
+'''
+Dhany seorang mahasiswa Informatika yang saat ini sedang duduk di bangku Semester II. Pada semester ini, ia diperhadapkan dengan mata kuliah
+yang berbasis Python. Ia merasa kesulitan dengan bahasa pemrograman yang satu ini. Kamu sebagai teman baiknya Dhany, dimintakan tolong untuk
+membantu Dhany dalam menyelesaikan tugas kuliahnya yang diberikan oleh dosen mata kuliahnya. Pada tugas kali ini, Dhany diminta untuk membuat
+sebuah program python yang dapat menunjukkan perbedaan antara konsep tuple dengan dictionary/list(Bisa pilih salah 1). Adapun spesifikasi
+program yang harus dipenuhi:
+Input:
+- Langsung diintegrasikan langsung ke dalam program
+Proses:
+- Program menampilkan bentuk tipe data
+- Program dapat mengambil salah satu/seluruh elemen dari daftar tuple
+- Program dapat menunjukkan operasi yang membedakan antara Tuple dengan yang lainnya
+- Program dapat menghitung panjang daftar tuple saat ini
+Output:
+- Mengeluarkan keluaran dari tiap-tiap proses
+'''
+
+daftar_tuple = ("Harta", "Priliano", "Ngoding", "21 tahun", "Informatika", "Duta Wacana")
+
+print("Bentuk daftar: ", type(daftar_tuple))
+
+print("1.",daftar_tuple[5])
+print("============")
+for isi in daftar_tuple:
+    print("2.",isi)
+print("============")
+#del(daftar_tuple[0])
+#print("3.",daftar_tuple)
+#daftar_tuple[1] = "Sasrono"
+#print("3.",daftar_tuple)
+print("3.Panjang daftar tuple:", len(daftar_tuple))
+print("============")
+print("Buat biodata:")
+print("Nama depan:",daftar_tuple[0])
+print("Nama belakang:",daftar_tuple[1])
+print("Hobi:",daftar_tuple[2])
+print("Usia:",daftar_tuple[3])
+print("Jurusan:",daftar_tuple[4])
+print("Universitas:",daftar_tuple[5])
