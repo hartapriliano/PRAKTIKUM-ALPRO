@@ -1,0 +1,39 @@
+#REFERENSI: https://www.malasngoding.com/operasi-tipe-data-set/
+
+'''
+Marta adalah salah satu mahasiswa aktif yang ada di kampusnya. Dan saat ini ia tengah menduduki bangku kuliah semester II. Di kampusnya,
+ia memiliki teman baik yang kurang kompeten dalam hal coding. Sehingga ketika temannya mendapat tugas dari dosennya, ia tidak dapat
+mengerjakan. Akhirnya pun, kamu sebagai teman dekatnya dimintai tolong untuk membantunya. Kebetulan juga kamu saat ini sedang dalam waktu
+luang, akhirnya pun mau untuk dimintai tolong. Program yang diinginkan berjalan pada bahasa pemrograman python. Dimana program tersebut
+membuktikan adanya perbedaan tipe class set dengan yang lainnya. Adapun input, proses, output yang diharapkan pada program:
+Input:
+- Langsung dari programnya(Tidak ada inputan dari user)
+Proses:
+- Mampu mengakses seluruh isi data pada set
+- Mampu menghapus data yang ada dalam pada set
+- Mampu menambah isi data ke dalam set
+- Mampu mengubah data yang ada dalam pada set
+- Mampu menghitung panjang pada set
+- Operasi unik yang ada pada set
+
+Output:
+- Mampu menampilkan hasil dari tiap-tiap proses yang dilakukan
+'''
+
+set_makanan = {"Kwetiau", "Sate", "Bakso", "Mie", "Soto", "Gudeg"}
+
+print("1. Isi dari set makanan:",set_makanan)
+print(type(set_makanan))
+set_makanan.discard("Bakso")
+print("2. Isi dari set setelah dihapus:",set_makanan)
+set_makanan.add("Pangsit")
+print("3. Isi dari set setelah ditambah:", set_makanan)
+set_makanan.update(["Bubur"])
+print("4. Isi dari set setelah ditambah:", set_makanan)
+print("5. Panjang dari set makanan:",len(set_makanan))
+daftar_makanan= {"Siomay", "Batagor", "Cakue", "Soto", "Sate"}
+print("6.1. Set setelah dilakukan union/penggabungan:",set_makanan|daftar_makanan) #set_makanan.union(daftar_makanan)
+print("6.2. Set setelah dilakukan intersection/irisan:",set_makanan.intersection(daftar_makanan)) #set_makanan&daftar_makanan
+print("6.3. Set setelah dilakukan pemotongan:",set_makanan-daftar_makanan)
+hanya_daftar_makanan = set_makanan.union(daftar_makanan) - set_makanan.intersection(daftar_makanan)
+print("6.4. Set setelah dilakukan penjumlahan di luar irisan: ", hanya_daftar_makanan)
