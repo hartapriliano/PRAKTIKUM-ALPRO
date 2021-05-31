@@ -1,0 +1,40 @@
+#REFERENSI: https://kelasprogrammer.com/fungsi-rekursif-python/
+
+'''
+Suatu ketika Nasuha sedang mendapat tugas coding dari dosen pengampu Algoritma Pemrograman untuk membuatkan sebuah program. Dimana program itu
+berjalan di bahasa pemrograman Python. Karena kebetulan tema yang sedang diajarkan adalah konsep rekursif maka program harus mengimplementasikan
+dari si fungsi rekursif tersebut. Program bebas melakukan apapun namun tetap dengan catatan harus menerapkan konsep rekursif itu sendiri. 
+Karena Nasuha mengalami kesulitan dalam memahami bahasa pemrograman Python ini, kamu sebagai teman baiknya Nasuha dimintakan tolong 
+untuk membantu membuatkan programnya. Ketentuan input, proses, output menyesuaikan program yang akan dibangun.
+Input:
+- Langsung dari programnya
+
+Proses:
+- Melakukan operasi dari perancangan program yang dibuat
+
+Output:
+- Menampilkan hasil dari penghitungan proses yang dilakukan program
+'''
+
+print("=========PROGRAM PENGOLAHAN ANGKA SECARA ASCENDING/DESCENDING")
+
+'''
+def ascending(data):
+    if(data >= 0) :
+        print("Data ke-", 30-data)
+        ascending(data-1)
+    else:
+        print("Penghitungan secara ascending telah selesai")
+
+ascending(30)
+'''
+
+
+def descending(angka):
+    if(angka >= 0):
+        print("Data ke-", angka)
+        descending(angka-1)
+    else:
+        print("Penghitungan secara descending telah selesai")
+
+descending(45)
