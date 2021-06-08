@@ -1,0 +1,45 @@
+
+#REFERENSI: https://www.pythonindo.com/regular-expression/
+#LIRIK LAGU: https://liriklaguindonesia.net/naik-delman.htm
+
+''' Pada suatu hari, Bimo sedang mendapat tugas akhir dari dosen pemrogramannya. Bimo mendapat tugas untuk membuatkan sebuah program
+yang berjalan pada bahasa Python untuk menerapkan tema yang sudah dipelajari pada minggu akhirnya yaitu Regular Expression. Program
+dibebaskan untuk melakukan operasi apa pun, yang penting jelas alur dan prosesnya seperti apa. Adapun input, proses, output yang
+diharapkan:
+Input:
+ Langsung dilakukan dalam programnya
+Proses:
+ Melakukan operasi yang telah ditentukan
+Output:
+ Menampilkan dari hasil operasi yang dilakukan'''
+
+
+import re
+
+liriklagu = "Pada Hari Minggu ku turut ayah ke kota naik delman istimewa ku duduk di muka Ku duduk samping pak kusir yang sedang bekerja mengendarai kuda supaya baik jalannya Tuk-tik-tak-tik-tuk tik-tak-tik-tuk tik-tak-tik-tuk Tuk-tik-tak-tik-tuk tik-tak suara sepatu kuda"
+
+print (liriklagu)
+print("\n")
+
+
+print("Menampilkan karakter spasi pertama")
+cari_spasi = re.search("\s", liriklagu)
+print("Menampilkan karakter white-space yang berada pada posisi: ",cari_spasi.start())
+print("==============================")
+
+print("Menampilkan pernyataan konfirmasi, apakah string liriklagu diawali oleh ...sesuatu... dan diakhiri oleh ...sesuatu...")
+cek_kata = re.search("^Pada.*Kuda$", liriklagu)
+if cek_kata:
+    print("Sesuai")
+else:
+    print("Tidak sesuai")
+print("==============================")   
+
+print("Menampilkan string yang berbunyi kata tak")
+ini_kata = re.findall("tak", liriklagu)
+print(ini_kata)
+print("==============================")
+
+print("Menampilkan string yang spasinya diganti simbol *")
+ganti_spasi = re.sub("\s", "*", liriklagu, 5)
+print(ganti_spasi)
